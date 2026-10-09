@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleuriste Demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f7f5f2;
+      color: #222;
+      padding: 16px;
+    }
+    main { text-align: center; max-width: 480px; width: 100%; }
+    h1 { font-weight: 600; margin-bottom: 8px; }
+    p { color: #666; margin-top: 0; margin-bottom: 32px; }
+    nav { display: flex; flex-direction: column; gap: 12px; }
+    a {
+      display: block;
+      padding: 16px 24px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      color: inherit;
+      text-decoration: none;
+      font-size: 18px;
+      transition: border-color .15s, transform .15s;
+    }
+    a:hover { border-color: #222; transform: translateY(-1px); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Fleuriste</h1>
+    <p>Choose a page to preview</p>
+    <nav>
+      <a href="Home/simple.html">Home (simple)</a>
+      <a href="Product/simple.html">Product (simple)</a>
+    </nav>
+  </main>
+</body>
+</html>

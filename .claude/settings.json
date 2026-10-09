@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -viE '\\\\.\\(js|css\\)$')",
+      "Bash(python3 -I /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/txt.py Home/Furniture.html)",
+      "Bash(python3 -I /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/txt.py \"Product/Eleifend Donec – Furniture.html\")",
+      "Bash(grep -oE '<a href=\"[^\"]*\" class=\"site-logo-container\"[^>]*>.{0,600}' Home/Furniture.html)",
+      "Bash(grep -oE 'site-title[^>]*>.{0,200}' Home/Furniture.html)",
+      "Bash(python3 -I -)",
+      "Bash(mkdir -p _original tools images)",
+      "Bash(cp Home/Furniture.html \"_original/home.html\")",
+      "Bash(cp \"Product/Eleifend Donec – Furniture.html\" \"_original/product.html\")",
+      "Bash(python3 -I tools/rebrand.py)",
+      "Bash(python3 -I /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/txt.py Home/index.html)",
+      "Bash(python3 -I /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/txt.py Product/index.html)",
+      "Read(//Applications/Google Chrome.app/**)",
+      "Bash(grep -oE '.{0,40}rel=\"tag\"[^>]*>[^<]*' _original/product.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --window-size=1440,4200 --virtual-time-budget=8000 --screenshot=/private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/home.png file://__TRACKED_VAR__/Home/index.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --window-size=1440,2400 --virtual-time-budget=8000 --screenshot=/private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/product.png file://__TRACKED_VAR__/Product/index.html)",
+      "Bash(grep -oE '<span class=\"posted_in\">Brand:.{0,300}' Product/index.html)",
+      "Bash(python3 -I -c \"import PIL; print\\(PIL.__version__\\)\")",
+      "Bash(cd /Users/arjun/Desktop/Fleuriste-template/images && mkdir -p originals && mv *.jpg *.png originals/ && ls originals | wc -l)",
+      "Bash(python3 -I tools/prepare_images.py)",
+      "Bash(python3 -I /Users/arjun/Desktop/Fleuriste-template/tools/prepare_images.py)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --window-size=1440,6200 --virtual-time-budget=10000 --screenshot=/private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/home.png file://__TRACKED_VAR__/Home/index.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --window-size=1440,2900 --virtual-time-budget=10000 --screenshot=/private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/product.png file://__TRACKED_VAR__/Product/index.html)",
+      "Bash(sips -c 3100 1440 --cropOffset 0 0 /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/home.png --out /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/home-top.png)",
+      "Bash(sips -c 3100 1440 --cropOffset 3100 0 /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/home.png --out /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/home-bot.png)",
+      "Bash(python3 -I -c \"import bs4\")",
+      "Bash(python3 -I /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/tree.py Home/index.html '<div class=\"entry-content is-layout-constrained\">' 4)",
+      "Bash(python3 -I /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/tree.py Home/index.html 'gspb_col-id-gsbp-672ffc6\" >' 5)",
+      "Bash(python3 -I /private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/tree.py Product/index.html '<main' 7)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --window-size=420,900 --virtual-time-budget=10000 --screenshot=/private/tmp/claude-501/-Users-arjun-Desktop-Fleuriste-template/10531949-f014-4278-b4da-2d421eb2bab8/scratchpad/fm.png file://__TRACKED_VAR__/Product/index.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --window-size=420,900 --virtual-time-budget=10000 --dump-dom file://__TRACKED_VAR__/Product/simple.html)",
+      "Bash(grep -o '.\\\\{60\\\\}\\\\$.\\\\{40\\\\}' Home/simple.html Product/simple.html)",
+      "Bash(grep -v 'currencySymbol\">\\\\$</span>[0-9]')",
+      "Bash(grep -v '^\\\\S*:\\\\s*$')",
+      "Bash(grep -o '<del.\\\\{0,300\\\\}</del>' Home/simple.html)"
+    ],
+    "additionalDirectories": [
+      "/Users/arjun/Desktop/Fleuriste-template"
+    ]
+  }
+}
